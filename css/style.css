@@ -17,6 +17,14 @@
     max-width: 1150px;
     margin: 40px auto;
 }
+
+.loader{
+    font-size: 30px;
+    color: grey;
+    text-align: center;
+    margin-top: 50px;
+}
+
 /* CARD  */
 .card{
     display: flex;

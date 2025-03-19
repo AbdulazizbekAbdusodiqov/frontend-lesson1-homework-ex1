@@ -1,4 +1,5 @@
 const mainElement = document.querySelector(".main")
+mainElement.innerHTML += `<p class="loader">Loading...</p>`
 mainElement.innerHTML += `<div class="container"></div>`
 
 function generateCard(data) {
@@ -27,4 +28,7 @@ function generateCard(data) {
 
 fetch("https://dummyjson.com/users")
     .then(res => res.json())
-    .then(result => generateCard(result.users))
+    .then((result) => {
+        generateCard(result.users)
+        mainElement.querySelector(".loader").innerHTML = ""
+    })
